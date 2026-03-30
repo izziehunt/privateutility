@@ -72,20 +72,18 @@ export default function SplashScreen() {
               />
             </div>
             
-            {/* Wave - animated to drift side to side while sliding down */}
+            {/* Wave - slides down while drifting left to right */}
             <motion.div
               className="absolute h-[1767px] w-[843px]"
               data-name="WAVE 1"
               animate={{
-                // Slide down from top to bottom with key positions matching frames
-                y: [-236, 100, 300, 572, 667, 791, 1200],
-                // Drift side to side matching the frame positions
-                x: [-310, -250, -200, -182, -315, -432, -500],
+                y: [-236, 150, 600, 1200],
+                x: [-360, -260, -100, 120],
               }}
               transition={{
                 duration: 10,
-                ease: "easeInOut",
-                times: [0, 0.15, 0.3, 0.5, 0.65, 0.8, 1],
+                ease: [0.2, 0.0, 0.4, 1.0],
+                times: [0, 0.28, 0.62, 1],
               }}
             >
               <img 
