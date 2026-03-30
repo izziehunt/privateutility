@@ -72,18 +72,18 @@ export default function SplashScreen() {
               />
             </div>
             
-            {/* Wave - slides down while drifting left to right */}
+            {/* Wave - slides down while washing left to right repeatedly */}
             <motion.div
               className="absolute h-[1767px] w-[843px]"
               data-name="WAVE 1"
               animate={{
-                y: [-236, 150, 600, 1200],
-                x: [-360, -260, -100, 120],
+                y: [-236, 100, 320, 540, 760, 980, 1200],
+                x: [-360, -80, -300, -55, -240, -10, 140],
               }}
               transition={{
-                duration: 10,
-                ease: [0.2, 0.0, 0.4, 1.0],
-                times: [0, 0.28, 0.62, 1],
+                duration: 8,
+                ease: "easeInOut",
+                times: [0, 0.14, 0.29, 0.44, 0.6, 0.78, 1],
               }}
             >
               <img 
