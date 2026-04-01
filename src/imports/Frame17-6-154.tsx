@@ -3,8 +3,9 @@ import imgWaveocto1 from "../assets/0823ef1c13441622248c39898a7b5f74604a9352.png
 import imgWaveshrimp1 from "../assets/8ed6ffcdc268d308a4030ce2147c31953f0a15c1.png";
 import imgWavecrab1 from "../assets/d6157abe27276ac4289d3e009849ea4c61b53793.png";
 import imgWaveBostonTag1 from "../assets/b51e75b846b165b8c3a5201d7f1e678ff2d29d2f.png";
+import imgWaveCustomization from "../assets/wavecustomization.png";
 import { motion } from "motion/react";
-import { BookOpen, User } from "lucide-react";
+import { BookOpen } from "lucide-react";
 
 interface Frame17Props {
   onTagClick?: () => void;
@@ -140,7 +141,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
           ease: "easeInOut",
         }}
       >
-        <User className="size-6 text-white" />
+        <img src={imgWaveCustomization} alt="Character customization" className="size-6 object-contain" />
       </motion.button>
 
       {/* Travel Journal Button - Fixed in lower right */}
