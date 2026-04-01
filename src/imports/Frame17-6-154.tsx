@@ -4,8 +4,8 @@ import imgWaveshrimp1 from "../assets/8ed6ffcdc268d308a4030ce2147c31953f0a15c1.p
 import imgWavecrab1 from "../assets/d6157abe27276ac4289d3e009849ea4c61b53793.png";
 import imgWaveBostonTag1 from "../assets/b51e75b846b165b8c3a5201d7f1e678ff2d29d2f.png";
 import imgWaveCustomization from "../assets/wavecharacter.png";
+import imgWaveBook from "../assets/wavebook.png";
 import { motion } from "motion/react";
-import { BookOpen } from "lucide-react";
 
 interface Frame17Props {
   onTagClick?: () => void;
@@ -138,7 +138,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
 
       {/* Travel Journal Button - Fixed in lower right */}
       <motion.button
-        className="absolute right-6 bottom-6 z-40 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full p-4 shadow-lg cursor-pointer border-2 border-white"
+        className="absolute right-6 bottom-6 z-40 cursor-pointer bg-transparent border-none p-0"
         onClick={onJournalClick}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -151,7 +151,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
           ease: "easeInOut",
         }}
       >
-        <BookOpen className="size-6 text-white" />
+        <img src={imgWaveBook} alt="Travel Journal" className="w-[70px] h-[70px] object-contain" />
       </motion.button>
     </div>
   );
