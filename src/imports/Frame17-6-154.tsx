@@ -20,7 +20,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWavemap1} />
       </div>
       <motion.div
-        className="absolute h-[479px] left-[-101px] top-[691px] w-[460px]"
+        className="absolute h-[479px] left-[-71px] top-[721px] w-[460px]"
         data-name="waveocto 1"
         animate={{
           x: [0, 15, 0],
@@ -35,7 +35,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWaveocto1} />
       </motion.div>
       <motion.div
-        className="absolute h-[306px] left-[9px] top-[8px] w-[294px]"
+        className="absolute h-[306px] left-[39px] top-[38px] w-[294px]"
         data-name="waveocto 2"
         animate={{
           x: [0, -12, 0],
@@ -51,7 +51,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWaveocto1} />
       </motion.div>
       <motion.div
-        className="absolute h-[361px] left-[-11px] top-[484px] w-[347px]"
+        className="absolute h-[361px] left-[19px] top-[514px] w-[347px]"
         data-name="waveshrimp 1"
         animate={{
           x: [0, 18, 0],
@@ -67,7 +67,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWaveshrimp1} />
       </motion.div>
       <motion.div
-        className="absolute flex h-[361px] items-center justify-center left-[-94px] top-[-47px] w-[347px]"
+        className="absolute flex h-[361px] items-center justify-center left-[-64px] top-[-17px] w-[347px]"
         animate={{
           x: [0, -10, 0],
           y: [0, 8, 0],
@@ -128,7 +128,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
 
       {/* Character Customization Button - Fixed in upper left */}
       <motion.button
-        className="absolute left-0 top-0 z-40 cursor-pointer bg-transparent border-none p-0"
+        className="absolute left-[30px] top-[30px] z-40 cursor-pointer bg-transparent border-none p-0"
         onClick={onCharacterClick}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
