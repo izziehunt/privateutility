@@ -133,7 +133,7 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <img src={imgWaveCustomization} alt="Character customization" className="w-[1045px] h-[915px] object-contain" />
+        <img src={imgWaveCustomization} alt="Character customization" className="w-[1045px] h-[915px] object-contain object-left-top" />
       </motion.button>
 
       {/* Travel Journal Button - Fixed in lower right */}
