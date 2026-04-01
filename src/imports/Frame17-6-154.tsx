@@ -128,20 +128,12 @@ export default function Frame({ onTagClick, onJournalClick, onCharacterClick }: 
 
       {/* Character Customization Button - Fixed in upper left */}
       <motion.button
-        className="absolute left-6 top-6 z-40 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full p-4 shadow-lg cursor-pointer border-2 border-white"
+        className="absolute left-4 top-4 z-40 cursor-pointer bg-transparent border-none p-0"
         onClick={onCharacterClick}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        animate={{
-          rotate: [0, -5, 5, 0],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       >
-        <img src={imgWaveCustomization} alt="Character customization" className="size-6 object-contain" />
+        <img src={imgWaveCustomization} alt="Character customization" className="size-16 object-contain" />
       </motion.button>
 
       {/* Travel Journal Button - Fixed in lower right */}
