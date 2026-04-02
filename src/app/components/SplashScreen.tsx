@@ -21,10 +21,10 @@ export default function SplashScreen() {
   const [showCharacterCustomization, setShowCharacterCustomization] = useState(false);
 
   useEffect(() => {
-    // After wave animation completes (8 seconds), show start screen
+    // After wave animation completes (5 seconds), show start screen
     const timer = setTimeout(() => {
       setShowStartScreen(true);
-    }, 8000);
+    }, 5000);
     
     return () => clearTimeout(timer);
   }, []);
@@ -101,7 +101,7 @@ export default function SplashScreen() {
                 x: [-360, -80, -300, -55, -240, -10, 140],
               }}
               transition={{
-                duration: 8,
+                duration: 5,
                 ease: "easeInOut",
                 times: [0, 0.14, 0.29, 0.44, 0.6, 0.78, 1],
               }}
