@@ -5,6 +5,7 @@ import imgWavecrab1 from "../assets/d6157abe27276ac4289d3e009849ea4c61b53793.png
 import imgWaveBostonTag1 from "../assets/b51e75b846b165b8c3a5201d7f1e678ff2d29d2f.png";
 import imgWaveLAXTag1 from "../assets/waveLAXtag.png";
 import imgWaveNYCTag1 from "../assets/waveNYCtag.png";
+import imgWaveVancouverTag1 from "../assets/wavevancouvertag.png";
 import imgWaveCustomization from "../assets/wavecharactericon.png";
 import imgWaveBook from "../assets/wavebookicon.png";
 import { motion } from "motion/react";
@@ -13,11 +14,12 @@ interface Frame17Props {
   onTagClick?: () => void;
   onLAXTagClick?: () => void;
   onNYCTagClick?: () => void;
+  onVancouverTagClick?: () => void;
   onJournalClick?: () => void;
   onCharacterClick?: () => void;
 }
 
-export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onJournalClick, onCharacterClick }: Frame17Props) {
+export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onVancouverTagClick, onJournalClick, onCharacterClick }: Frame17Props) {
   return (
     <div className="bg-white mix-blend-multiply relative size-full">
       <div className="absolute h-[900px] left-[-25px] top-[-5px] w-[427px]" data-name="wavemap 1">
@@ -150,6 +152,30 @@ export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onJour
         <div className="flex-none rotate-[-12deg]">
           <div className="h-[109px] relative w-[57px]" data-name="WaveLAX Tag 1">
             <img alt="Los Angeles destination" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWaveLAXTag1} />
+          </div>
+        </div>
+      </motion.button>
+
+      {/* Vancouver Tag - upper left of map */}
+      <motion.button
+        className="absolute flex h-[120.412px] items-center justify-center left-[28px] top-[230px] w-[84.56px] cursor-pointer"
+        onClick={onVancouverTagClick}
+        animate={{
+          y: [0, -3, 0],
+          rotate: [-8, -6.5, -8],
+        }}
+        transition={{
+          duration: 2.6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.4,
+        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <div className="flex-none rotate-[-8deg]">
+          <div className="h-[109px] relative w-[57px]" data-name="WaveVancouver Tag 1">
+            <img alt="Vancouver destination" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWaveVancouverTag1} />
           </div>
         </div>
       </motion.button>

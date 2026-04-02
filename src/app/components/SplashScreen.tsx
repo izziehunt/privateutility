@@ -8,6 +8,7 @@ import MapScreen from "../../imports/Frame17-6-154";
 import BostonDetails from "./BostonDetails";
 import LAXDetails from "./LAXDetails";
 import NYCDetails from "./NYCDetails";
+import VancouverDetails from "./VancouverDetails";
 import TravelJournal from "./TravelJournal";
 import CharacterCustomization from "./CharacterCustomization";
 
@@ -17,6 +18,7 @@ export default function SplashScreen() {
   const [showBostonDetails, setShowBostonDetails] = useState(false);
   const [showLAXDetails, setShowLAXDetails] = useState(false);
   const [showNYCDetails, setShowNYCDetails] = useState(false);
+  const [showVancouverDetails, setShowVancouverDetails] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
   const [showCharacterCustomization, setShowCharacterCustomization] = useState(false);
 
@@ -55,6 +57,14 @@ export default function SplashScreen() {
 
   const handleCloseNYCDetails = () => {
     setShowNYCDetails(false);
+  };
+
+  const handleVancouverTagClick = () => {
+    setShowVancouverDetails(true);
+  };
+
+  const handleCloseVancouverDetails = () => {
+    setShowVancouverDetails(false);
   };
 
   const handleJournalClick = () => {
@@ -167,6 +177,7 @@ export default function SplashScreen() {
               onTagClick={handleBostonTagClick}
               onLAXTagClick={handleLAXTagClick}
               onNYCTagClick={handleNYCTagClick}
+              onVancouverTagClick={handleVancouverTagClick}
               onJournalClick={handleJournalClick}
               onCharacterClick={handleCharacterClick}
             />
@@ -189,6 +200,13 @@ export default function SplashScreen() {
             <AnimatePresence>
               {showNYCDetails && (
                 <NYCDetails onClose={handleCloseNYCDetails} />
+              )}
+            </AnimatePresence>
+
+            {/* Vancouver Details Overlay */}
+            <AnimatePresence>
+              {showVancouverDetails && (
+                <VancouverDetails onClose={handleCloseVancouverDetails} />
               )}
             </AnimatePresence>
 
