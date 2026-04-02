@@ -31,7 +31,7 @@ export default function App() {
         {/* iPhone frame */}
         <div className="relative bg-black rounded-[60px] p-3 shadow-2xl">
           {/* Screen */}
-          <div className="bg-[#3b52c8] rounded-[48px] overflow-hidden w-[393px] h-[852px] relative">
+          <div className="bg-white rounded-[48px] overflow-hidden w-[393px] h-[852px] relative">
             {/* Dynamic Island */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[126px] h-[37px] bg-black rounded-b-[20px] z-10" />
 
