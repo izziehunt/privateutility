@@ -20,7 +20,7 @@ interface Frame17Props {
 export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onJournalClick, onCharacterClick }: Frame17Props) {
   return (
     <div className="bg-white mix-blend-multiply relative size-full">
-      <div className="absolute h-[895px] left-[-25px] top-0 w-[427px]" data-name="wavemap 1">
+      <div className="absolute h-[900px] left-[-25px] top-[-5px] w-[427px]" data-name="wavemap 1">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgWavemap1} />
       </div>
       <motion.div

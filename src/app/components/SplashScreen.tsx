@@ -74,7 +74,7 @@ export default function SplashScreen() {
   };
 
   return (
-    <div className="bg-[#3b52c8] relative size-full overflow-hidden">
+    <div className="bg-white relative size-full overflow-hidden">
       <AnimatePresence mode="wait">
         {!showStartScreen ? (
           <motion.div
