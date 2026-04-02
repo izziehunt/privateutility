@@ -6,6 +6,7 @@ import imgWaveStartScreen1 from "../../assets/f480dde347a65393e3090e140ddaf00c49
 import imgWaveCrab1 from "../../assets/d27f2093a6127dd24372448631bb13b63f3b656f.png";
 import MapScreen from "../../imports/Frame17-6-154";
 import BostonDetails from "./BostonDetails";
+import LAXDetails from "./LAXDetails";
 import TravelJournal from "./TravelJournal";
 import CharacterCustomization from "./CharacterCustomization";
 
@@ -13,6 +14,7 @@ export default function SplashScreen() {
   const [showStartScreen, setShowStartScreen] = useState(false);
   const [showMapScreen, setShowMapScreen] = useState(false);
   const [showBostonDetails, setShowBostonDetails] = useState(false);
+  const [showLAXDetails, setShowLAXDetails] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
   const [showCharacterCustomization, setShowCharacterCustomization] = useState(false);
 
@@ -35,6 +37,14 @@ export default function SplashScreen() {
 
   const handleCloseBostonDetails = () => {
     setShowBostonDetails(false);
+  };
+
+  const handleLAXTagClick = () => {
+    setShowLAXDetails(true);
+  };
+
+  const handleCloseLAXDetails = () => {
+    setShowLAXDetails(false);
   };
 
   const handleJournalClick = () => {
@@ -143,8 +153,9 @@ export default function SplashScreen() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <MapScreen 
-              onTagClick={handleBostonTagClick} 
+            <MapScreen
+              onTagClick={handleBostonTagClick}
+              onLAXTagClick={handleLAXTagClick}
               onJournalClick={handleJournalClick}
               onCharacterClick={handleCharacterClick}
             />
@@ -153,6 +164,13 @@ export default function SplashScreen() {
             <AnimatePresence>
               {showBostonDetails && (
                 <BostonDetails onClose={handleCloseBostonDetails} />
+              )}
+            </AnimatePresence>
+
+            {/* LAX Details Overlay */}
+            <AnimatePresence>
+              {showLAXDetails && (
+                <LAXDetails onClose={handleCloseLAXDetails} />
               )}
             </AnimatePresence>
 
