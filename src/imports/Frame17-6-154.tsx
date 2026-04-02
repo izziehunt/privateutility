@@ -110,7 +110,7 @@ export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onVanc
       
       {/* Boston Tag - clickable and animated */}
       <motion.button
-        className="absolute flex h-[120.412px] items-center justify-center left-[227px] top-[343px] w-[84.56px] cursor-pointer"
+        className="absolute flex h-[120.412px] items-center justify-center left-[200px] top-[343px] w-[84.56px] cursor-pointer"
         onClick={onTagClick}
         animate={{
           y: [0, -3, 0],
@@ -182,7 +182,7 @@ export default function Frame({ onTagClick, onLAXTagClick, onNYCTagClick, onVanc
 
       {/* NYC Tag - upper right of map */}
       <motion.button
-        className="absolute flex h-[120.412px] items-center justify-center left-[260px] top-[290px] w-[84.56px] cursor-pointer"
+        className="absolute flex h-[120.412px] items-center justify-center left-[260px] top-[320px] w-[84.56px] cursor-pointer"
         onClick={onNYCTagClick}
         animate={{
           y: [0, -3, 0],
