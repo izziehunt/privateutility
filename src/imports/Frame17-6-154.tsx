@@ -5,8 +5,8 @@ import imgWavecrab1 from "../assets/d6157abe27276ac4289d3e009849ea4c61b53793.png
 import imgWaveBostonTag1 from "../assets/b51e75b846b165b8c3a5201d7f1e678ff2d29d2f.png";
 import imgWaveLAXTag1 from "../assets/waveLAXtag.png";
 import imgWaveNYCTag1 from "../assets/waveNYCtag.png";
-import imgWaveCustomization from "../assets/wavecharacter.png";
-import imgWaveBook from "../assets/wavebook.png";
+import imgWaveCustomization from "../assets/wavecharactericon.png";
+import imgWaveBook from "../assets/wavebookicon.png";
 import { motion } from "motion/react";
 
 interface Frame17Props {
