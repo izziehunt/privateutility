@@ -97,13 +97,13 @@ export default function SplashScreen() {
               className="absolute h-[1767px] w-[843px]"
               data-name="WAVE 1"
               animate={{
-                y: [-236, 100, 320, 540, 760, 980, 1200],
-                x: [-360, -80, -300, -55, -240, -10, 140],
+                y: [-236, 380, 760, 1200],
+                x: [-360, -60, -310, 140],
               }}
               transition={{
                 duration: 5,
-                ease: "easeInOut",
-                times: [0, 0.14, 0.29, 0.44, 0.6, 0.78, 1],
+                ease: ["easeInOut", "easeInOut", "easeInOut"],
+                times: [0, 0.33, 0.67, 1],
               }}
             >
               <img 
