@@ -7,6 +7,7 @@ import imgWaveCrab1 from "../../assets/d27f2093a6127dd24372448631bb13b63f3b656f.
 import MapScreen from "../../imports/Frame17-6-154";
 import BostonDetails from "./BostonDetails";
 import LAXDetails from "./LAXDetails";
+import NYCDetails from "./NYCDetails";
 import TravelJournal from "./TravelJournal";
 import CharacterCustomization from "./CharacterCustomization";
 
@@ -15,6 +16,7 @@ export default function SplashScreen() {
   const [showMapScreen, setShowMapScreen] = useState(false);
   const [showBostonDetails, setShowBostonDetails] = useState(false);
   const [showLAXDetails, setShowLAXDetails] = useState(false);
+  const [showNYCDetails, setShowNYCDetails] = useState(false);
   const [showJournal, setShowJournal] = useState(false);
   const [showCharacterCustomization, setShowCharacterCustomization] = useState(false);
 
@@ -45,6 +47,14 @@ export default function SplashScreen() {
 
   const handleCloseLAXDetails = () => {
     setShowLAXDetails(false);
+  };
+
+  const handleNYCTagClick = () => {
+    setShowNYCDetails(true);
+  };
+
+  const handleCloseNYCDetails = () => {
+    setShowNYCDetails(false);
   };
 
   const handleJournalClick = () => {
@@ -156,6 +166,7 @@ export default function SplashScreen() {
             <MapScreen
               onTagClick={handleBostonTagClick}
               onLAXTagClick={handleLAXTagClick}
+              onNYCTagClick={handleNYCTagClick}
               onJournalClick={handleJournalClick}
               onCharacterClick={handleCharacterClick}
             />
@@ -171,6 +182,13 @@ export default function SplashScreen() {
             <AnimatePresence>
               {showLAXDetails && (
                 <LAXDetails onClose={handleCloseLAXDetails} />
+              )}
+            </AnimatePresence>
+
+            {/* NYC Details Overlay */}
+            <AnimatePresence>
+              {showNYCDetails && (
+                <NYCDetails onClose={handleCloseNYCDetails} />
               )}
             </AnimatePresence>
 

@@ -20,7 +20,7 @@ export default function TravelJournal({ onBack }: TravelJournalProps) {
   const [savedEntry, setSavedEntry] = useState<JournalEntry | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const locations = ["Boston", "Los Angeles"];
+  const locations = ["Boston", "Los Angeles", "New York City"];
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
@@ -124,7 +124,7 @@ export default function TravelJournal({ onBack }: TravelJournalProps) {
                 }`}
                 whileTap={{ scale: 0.95 }}
               >
-                {location} {location === "Los Angeles" ? "🌴" : "🏙️"}
+                {location} {location === "Los Angeles" ? "🌴" : location === "New York City" ? "🗽" : "🏙️"}
               </motion.button>
             ))}
           </div>
