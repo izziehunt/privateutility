@@ -27,12 +27,14 @@ export default function App() {
       const vh = window.innerHeight;
 
       if (mobile) {
-        // Scale to FIT: keep all content visible, blue bg fills any edge gaps
-        const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+        // Use visualViewport for true visible area, excluding browser chrome
+        const trueW = window.visualViewport?.width ?? vw;
+        const trueH = window.visualViewport?.height ?? vh;
+        const scale = Math.min(trueW / DESIGN_W, trueH / DESIGN_H);
         const scaledW = DESIGN_W * scale;
         const scaledH = DESIGN_H * scale;
-        const offsetX = (vw - scaledW) / 2;
-        const offsetY = (vh - scaledH) / 2;
+        const offsetX = (trueW - scaledW) / 2;
+        const offsetY = (trueH - scaledH) / 2;
         setMobileLayout({ scale, offsetX, offsetY });
       } else {
         const scaleX = (vw - 32) / FULL_W;
@@ -42,7 +44,11 @@ export default function App() {
     };
     update();
     window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
+    window.visualViewport?.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("resize", update);
+      window.visualViewport?.removeEventListener("resize", update);
+    };
   }, []);
 
   // On a real phone — scale to fill the entire screen
