@@ -27,11 +27,10 @@ export default function App() {
       const vh = window.innerHeight;
 
       if (mobile) {
-        // Scale to COVER: fill every pixel, clip any overflow
-        const scale = Math.max(vw / DESIGN_W, vh / DESIGN_H);
+        // Scale to FIT: keep all content visible, blue bg fills any edge gaps
+        const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
         const scaledW = DESIGN_W * scale;
         const scaledH = DESIGN_H * scale;
-        // Center any overflow
         const offsetX = (vw - scaledW) / 2;
         const offsetY = (vh - scaledH) / 2;
         setMobileLayout({ scale, offsetX, offsetY });
